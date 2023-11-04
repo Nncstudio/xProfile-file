@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--CornerImage-->
+    <declare-styleable name="CornerImage">
+        <attr name="eStrokeWidth" format="dimension" />
+        <attr name="eStrokeColor" format="color" />
+        <attr name="eStrokeOverlay" format="boolean" />
+        <attr name="eBackground" format="color" />
+    </declare-styleable>
+
+    <!--CornerLayout-->
+    <declare-styleable name="CornerLayout">
+        <attr name="Radius" format="dimension"/>
+        <attr name="TopLeft" format="dimension"/>
+        <attr name="TopRight" format="dimension"/>
+        <attr name="BottomLeft" format="dimension"/>
+        <attr name="BottomRight" format="dimension"/>
+        <attr name="StrokeWidth" format="dimension"/>
+        <attr name="StrokeColor" format="color"/>
+        <attr name="iBackground" format="color"/>
+        <attr name="iBorderColor" format="color"/>
+    </declare-styleable>
+
+    <!--CircleView-->
+    <declare-styleable name="CircleView">
+        <attr name="cv_strokeWidthSize" format="float" />
+        <attr name="cv_fillRadius" format="float" />
+        <attr name="cv_fillColor" format="color" />
+        <attr name="cv_strokeColorValue" format="color" />
+        <attr name="cv_backgroundColorValue" format="color" />
+    </declare-styleable>
+
+</resources>

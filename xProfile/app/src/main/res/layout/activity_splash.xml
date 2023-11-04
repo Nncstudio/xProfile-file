@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/BackgroundColor"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_screen"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/ivCover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/iv_cover"
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:id="@+id/light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ivCover"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="@dimen/_18sdp"
+            android:textColor="@color/mainColor"
+            android:textStyle="bold"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x"/>
+
+        <TextView
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textAllCaps="true"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/iconColor"
+        android:layout_below="@id/light"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_portrait"/>
+</RelativeLayout>

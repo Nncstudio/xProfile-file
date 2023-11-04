@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/vStatus"
+            android:background="@color/transparent"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25sdp"/>
+
+    <RelativeLayout
+        android:id="@+id/tool"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:paddingStart="@dimen/_7sdp"
+        android:paddingEnd="@dimen/_7sdp"
+        android:layout_below="@id/vStatus">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/ic_round_close"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/bg_border"
+            android:layout_centerVertical="true"/>
+
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/share"
+            android:layout_centerInParent="true"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_8sdp"/>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/iNative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:layout_below="@id/tool"
+        android:background="@drawable/bg_native"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iNative"
+        android:layout_above="@+id/llShare">
+
+        <xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.SquareLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.CornerImage
+                android:id="@+id/iView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:elevation="@dimen/_2sdp"
+                android:scaleType="centerCrop"
+                app:eStrokeColor="@color/white"
+                app:eStrokeOverlay="true"
+                app:eStrokeWidth="@dimen/_1sdp" />
+
+        </xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.SquareLayout>
+
+
+    </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llShare"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/_7sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/BackgroundColor"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:textSize="@dimen/_8sdp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_9sdp"
+                android:text="@string/share_image_via"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivOther"
+                    android:background="@drawable/bg_circle"
+                    android:padding="@dimen/_9sdp"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_margin="@dimen/_7sdp"
+                    android:src="@drawable/ic_share"
+                    app:tint="@color/white"/>
+
+                <ImageView
+                    android:id="@+id/ivWhats"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_margin="@dimen/_7sdp"
+                    android:src="@drawable/wt"/>
+
+                <ImageView
+                    android:id="@+id/ivFb"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_margin="@dimen/_7sdp"
+                    android:src="@drawable/fb"/>
+
+                <ImageView
+                    android:id="@+id/ivInsta"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_margin="@dimen/_7sdp"
+                    android:src="@drawable/instagram"/>
+
+                <ImageView
+                    android:id="@+id/ivTwitter"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_margin="@dimen/_7sdp"
+                    android:src="@drawable/tw"/>
+            </LinearLayout>
+        </LinearLayout>
+
+</RelativeLayout>

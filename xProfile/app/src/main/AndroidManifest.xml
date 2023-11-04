@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name=".xProfile"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:largeHeap="true"
+        android:installLocation="preferExternal"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/ThemeApp"
+        tools:replace="android:supportsRtl">
+
+        <receiver
+            android:name=".utils.CheckNet"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.karumi.dexter.DexterActivity"
+            android:theme="@style/Dexter.Internal.Theme.Transparent"/>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" />
+
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="@string/applovin_sdk_key" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeApp"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.PreviewActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".picker.activities.AlbumSelectActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"/>
+
+
+        <activity
+            android:name=".picker.activities.HelperActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".picker.activities.ImageSelectActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"/>
+
+
+        <activity
+            android:name=".activities.AdjustActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activities.PatternActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activities.EraseActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activities.CropperActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activities.DripActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activities.DisplayActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.WorkActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activities.ShareActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"/>
+
+        <meta-data
+            android:name="com.huawei.hms.ml.DEPENDENCY"
+            android:value= "imgseg"/>
+
+    </application>
+
+</manifest>

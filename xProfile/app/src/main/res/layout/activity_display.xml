@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/vStatus"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"
+        android:background="@color/transparent"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/tool"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:paddingStart="@dimen/_7sdp"
+        android:paddingEnd="@dimen/_7sdp"
+        android:layout_below="@id/vStatus">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/ic_round_close"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/bg_border"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="@string/preview"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_8sdp" />
+
+        <ImageView
+            android:id="@+id/ivShare"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/ic_share"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/bg_border"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tool"
+        android:layout_above="@+id/iNative">
+
+        <xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.CornerImage
+            android:id="@+id/iView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:elevation="@dimen/_2sdp"
+            android:scaleType="centerCrop"
+            app:eStrokeColor="@color/white"
+            app:eStrokeOverlay="true"
+            app:eStrokeWidth="@dimen/_1sdp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/iNative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_7sdp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_native"/>
+
+</RelativeLayout>

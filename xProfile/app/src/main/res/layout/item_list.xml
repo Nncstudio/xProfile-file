@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <io.github.florent37.shapeofview.shapes.CircleView
+        android:id="@+id/rfItem"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        app:shape_circle_borderColor="@color/itemColor"
+        app:shape_circle_borderWidth="@dimen/_1sdp"
+        android:background="@color/itemColor">
+
+        <ImageView
+            android:id="@+id/ivPic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@color/itemColor"/>
+
+
+    </io.github.florent37.shapeofview.shapes.CircleView>
+
+    <TextView
+        android:textSize="@dimen/_6sdp"
+        android:textStyle="bold"
+        android:textColor="@color/iconColor"
+        android:gravity="center"
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="PT1"/>
+
+
+</LinearLayout>

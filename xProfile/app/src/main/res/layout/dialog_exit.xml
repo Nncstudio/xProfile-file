@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_close_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_12sdp"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/textViewExit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginBottom="@dimen/_7sdp"
+            android:gravity="center"
+            android:text="@string/are_you_sure_you_want_to_discard_changes"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/textViewDiscard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_below="@+id/textViewExit"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:background="@color/mainColor"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/discard_changes"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp" />
+
+
+        <TextView
+            android:id="@+id/textViewCancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_below="@+id/textViewDiscard"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/font"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/mainColor"
+            android:textSize="@dimen/_10sdp" />
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,12 @@
+buildscript {
+    dependencies {
+        classpath 'com.huawei.agconnect:agcp:1.9.0.300'
+    }
+}
+
+plugins {
+    id 'com.android.application' version '8.0.2' apply false
+    id 'com.android.library' version '8.0.2' apply false
+    id "com.google.gms.google-services" version "4.3.15" apply false
+    id 'com.onesignal.androidsdk.onesignal-gradle-plugin' version '[0.14.0, 0.99.99]' apply false
+}

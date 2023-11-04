@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/vStatus"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_25sdp"
+        android:background="@color/transparent"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <RelativeLayout
+        android:id="@+id/tool"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:paddingStart="@dimen/_7sdp"
+        android:paddingEnd="@dimen/_7sdp"
+        android:layout_below="@id/vStatus">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/ic_round_close"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/bg_border"
+            android:layout_centerVertical="true"/>
+
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/preview"
+            android:layout_centerInParent="true"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_8sdp"/>
+
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool"
+        android:layout_above="@id/iBanner">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_4sdp"
+            android:paddingEnd="@dimen/_4sdp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_115sdp"
+                android:layout_marginTop="@dimen/_16sdp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_insta"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:paddingBottom="@dimen/_9sdp">
+
+                    <xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.CornerImage
+                        android:id="@+id/ivInstagram"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:scaleType="centerCrop"
+                        android:elevation="@dimen/_2sdp"
+                        app:eStrokeColor="@color/white"
+                        app:eStrokeOverlay="true"
+                        app:eStrokeWidth="@dimen/_1sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/_12sdp"/>
+
+                    <LinearLayout
+                        android:id="@+id/iProf"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toTopOf="@id/ivInstagram"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivInstagram">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4371"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_9sdp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/post"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:textColor="@color/iconColor"
+                                android:textSize="@dimen/_6sdp"
+                                android:textStyle="bold"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5.7M"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_9sdp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/followers"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:textColor="@color/iconColor"
+                                android:textSize="@dimen/_6sdp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="573"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_9sdp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/following"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:textColor="@color/iconColor"
+                                android:textSize="@dimen/_6sdp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/editProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/edit_profile"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@drawable/bg_round"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:paddingStart="@dimen/_9sdp"
+                        android:paddingEnd="@dimen/_9sdp"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_7sdp"
+                        app:layout_constraintEnd_toEndOf="@+id/iProf"
+                        app:layout_constraintStart_toStartOf="@id/iProf"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iProf"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.CornerImage
+                    android:id="@+id/ivInsta"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:src="@drawable/instagram"
+                    app:eStrokeWidth="@dimen/_2sdp"
+                    app:eStrokeColor="@color/white"
+                    android:elevation="@dimen/_2sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_115sdp"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cFb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_fb"
+                    android:layout_marginStart="@dimen/_20sdp">
+
+                    <View
+                        android:id="@+id/iView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:background="@drawable/bg_item"
+                        android:backgroundTint="#1900B0FF"
+                        android:layout_margin="@dimen/_9sdp"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.CornerImage
+                        android:id="@+id/ivFacebook"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:scaleType="centerCrop"
+                        android:elevation="@dimen/_2sdp"
+                        app:eStrokeColor="@color/white"
+                        app:eStrokeOverlay="true"
+                        app:eStrokeWidth="@dimen/_1sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/iView"
+                        app:layout_constraintTop_toBottomOf="@id/iView"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/profile_pic"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_8sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/ivFacebook"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.CornerImage
+                    android:id="@+id/ivFb"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:src="@drawable/fb"
+                    app:eStrokeWidth="@dimen/_2sdp"
+                    app:eStrokeColor="@color/white"
+                    android:elevation="@dimen/_2sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_115sdp"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.CornerLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_whats"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    app:Radius="@dimen/_12sdp">
+
+                    <LinearLayout
+                        android:id="@+id/iWhats"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:orientation="horizontal"
+                        android:background="#4CAF50"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/chat"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8sdp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/status"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8sdp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/calls"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8sdp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.CornerImage
+                            android:id="@+id/ivWhatsapp"
+                            android:layout_width="@dimen/_55sdp"
+                            android:layout_height="@dimen/_55sdp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:elevation="@dimen/_2sdp"
+                            app:eStrokeColor="@color/white"
+                            app:eStrokeOverlay="true"
+                            app:eStrokeWidth="@dimen/_1sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/iView"
+                            app:layout_constraintTop_toBottomOf="@id/iView"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/profile_pic"
+                                android:textAllCaps="true"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_9sdp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/customize_your_profile_pic"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:textColor="@color/iconColor"
+                                android:textSize="@dimen/_6sdp"
+                                android:textStyle="bold"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.CornerLayout>
+
+                <xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.CornerImage
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:src="@drawable/wt"
+                    app:eStrokeWidth="@dimen/_2sdp"
+                    app:eStrokeColor="@color/white"
+                    android:elevation="@dimen/_2sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.solodroid.ads.sdk.ui.BannerAdView
+        android:orientation="horizontal"
+        android:id="@+id/iBanner"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

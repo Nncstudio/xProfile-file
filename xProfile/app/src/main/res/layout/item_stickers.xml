@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="@dimen/_35sdp"
+    android:layout_height="@dimen/_35sdp"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
+    android:gravity="center">
+
+    <xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.CornerLayout
+        android:id="@+id/rfItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:StrokeColor="@color/itemColor"
+        app:StrokeWidth="@dimen/_1sdp"
+        app:iBackground="@color/itemColor"
+        app:Radius="@dimen/_9sdp">
+
+        <ImageView
+            android:id="@+id/ivItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.CornerLayout>
+
+</xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.SquareLayout>

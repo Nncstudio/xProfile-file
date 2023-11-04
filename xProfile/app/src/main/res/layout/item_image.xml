@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_1sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.CornerLayout
+        android:id="@+id/iTooty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:StrokeWidth="@dimen/_2sdp"
+        app:StrokeColor="@color/transparent">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#80000000"
+            android:gravity="center"
+            android:lines="1"
+            android:visibility="gone"
+            android:padding="@dimen/_4sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+    </xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.CornerLayout>
+</xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.SquareLayout>
+

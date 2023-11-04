@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/vStatus"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_25sdp"
+        android:background="@color/transparent"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/tool"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:paddingStart="@dimen/_7sdp"
+        android:paddingEnd="@dimen/_7sdp"
+        android:layout_below="@id/vStatus">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/ic_round_close"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/bg_border"
+            android:layout_centerVertical="true"/>
+
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/adjust"
+            android:layout_centerInParent="true"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_8sdp"/>
+
+        <ImageView
+            android:id="@+id/ivDone"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/ic_save"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/bg_border"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <com.solodroid.ads.sdk.ui.BannerAdView
+        android:orientation="horizontal"
+        android:id="@+id/iBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/tool"/>
+
+    <FrameLayout
+        android:id="@+id/gpuImageFrame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/llBottom"
+        android:layout_below="@+id/iBanner">
+
+        <jp.co.cyberagent.android.gpuimage.GPUImageView
+            android:id="@+id/ivMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:gpuimage_show_loading="false"
+            app:gpuimage_surface_type="texture_view"/>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/ivCompare"
+        android:layout_width="@dimen/_27sdp"
+        android:layout_height="@dimen/_27sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:layout_marginBottom="@dimen/_9sdp"
+        android:padding="@dimen/_5sdp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/black"
+        android:onClick="onClick"
+        android:src="@drawable/ic_refrech"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/llBottom"/>
+
+    <RelativeLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/iSlide"
+            android:translationZ="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTool"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingTop="@dimen/_7sdp"
+            android:paddingBottom="@dimen/_7sdp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

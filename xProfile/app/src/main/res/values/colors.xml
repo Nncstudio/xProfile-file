@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">@color/mainColor</color>
+    <color name="colorAccentDark">@color/mainColor</color>
+    <color name="colorPrimary">@color/mainColor</color>
+    <color name="mainColor">#E8BB1A</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light">#FCFCFC</color>
+    <color name="black">#000000</color>
+    <color name="BackgroundColor">#FFFFFF</color>
+    <color name="iBackground">#FAFAFA</color>
+    <color name="lineColor">#FAFAFA</color>
+    <color name="itemColor">#F0F0F0</color>
+    <color name="iconColor">#757575</color>
+    <color name="transparent">#00000000</color>
+    <color name="fColor">#f9ca24</color>
+    <color name="bColor">#f6e58d</color>
+    <color name="iCons">#3E3E3E</color>
+</resources>

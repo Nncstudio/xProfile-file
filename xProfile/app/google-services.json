@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "592358433981",
+    "project_id": "ichange---change-bg",
+    "storage_bucket": "ichange---change-bg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592358433981:android:4d141dfb959a56afc143d4",
+        "android_client_info": {
+          "package_name": "xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592358433981-le7ohe4dn0u474cllomv13radcr1bbnq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro",
+            "certificate_hash": "fee672d457775a0295f4eab460b54549216d23a8"
+          }
+        },
+        {
+          "client_id": "592358433981-itggt5imobpbkhp295qrl0ik3r9sousd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAErN5eaLrVkW13rcLlksQh21Azg2V-Klk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592358433981-itggt5imobpbkhp295qrl0ik3r9sousd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

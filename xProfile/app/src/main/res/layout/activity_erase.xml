@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/vStatus"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_25sdp"
+        android:background="@color/transparent"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:paddingStart="@dimen/_7sdp"
+        android:paddingEnd="@dimen/_7sdp"
+        app:layout_constraintTop_toBottomOf="@id/vStatus">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/ic_round_close"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/bg_border"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:gravity="center|bottom"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:paddingStart="@dimen/_3sdp"
+            android:paddingEnd="@dimen/_3sdp">
+
+            <ImageView
+                android:id="@+id/imageViewUndo"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:onClick="onClick"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_undo" />
+
+            <ImageView
+                android:id="@+id/imageViewRedo"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:onClick="onClick"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_redo"/>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivDone"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/ic_save"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/bg_border"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+
+    <com.solodroid.ads.sdk.ui.BannerAdView
+        android:orientation="horizontal"
+        android:id="@+id/iBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+    <RelativeLayout
+        android:id="@+id/main_rel_parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/iBanner"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imageViewBackgroundCover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:id="@+id/main_rel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+    <xProfile.dpMaker.aiPhoto.removeBg.photoEditorPro.views.CornerImage
+        android:id="@+id/ivChange"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_margin="@dimen/_9sdp"
+        android:src="@drawable/tbg2"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <View
+            android:id="@+id/guideline2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"
+            app:layout_constraintBottom_toTopOf="@+id/viewLine"/>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/viewLine">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutEraser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:orientation="horizontal"
+                android:padding="@dimen/_4sdp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_33sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/_7sdp"
+                        android:paddingEnd="@dimen/_7sdp"
+                        android:gravity="center"
+                        android:text="@string/size"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_8sdp" />
+
+                    <SeekBar
+                        android:id="@+id/sbSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:max="65"
+                        android:maxHeight="@dimen/_3sdp"
+                        android:progressDrawable="@drawable/prog_line"
+                        android:splitTrack="false"
+                        android:thumb="@drawable/prog_thumb" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_33sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/_7sdp"
+                        android:paddingEnd="@dimen/_7sdp"
+                        android:gravity="center"
+                        android:text="@string/offset"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_8sdp" />
+
+                    <SeekBar
+                        android:id="@+id/seekBarBrushOffset"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:max="300"
+                        android:maxHeight="@dimen/_3sdp"
+                        android:progressDrawable="@drawable/prog_line"
+                        android:splitTrack="false"
+                        android:thumb="@drawable/prog_thumb"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutAuto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:padding="@dimen/_4sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_33sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/_7sdp"
+                        android:paddingEnd="@dimen/_7sdp"
+                        android:textSize="@dimen/_8sdp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="@string/threshold"/>
+
+                    <SeekBar
+                        android:id="@+id/seekBarThreshold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:max="80"
+                        android:maxHeight="@dimen/_3sdp"
+                        android:progressDrawable="@drawable/prog_line"
+                        android:splitTrack="false"
+                        android:thumb="@drawable/prog_thumb"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_33sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/_7sdp"
+                        android:paddingEnd="@dimen/_7sdp"
+                        android:gravity="center"
+                        android:textSize="@dimen/_8sdp"
+                        android:textColor="@color/black"
+                        android:text="@string/offset"/>
+
+                    <SeekBar
+                        android:id="@+id/sbOffset"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:maxHeight="@dimen/_3sdp"
+                        android:max="300"
+                        android:progressDrawable="@drawable/prog_line"
+                        android:splitTrack="false"
+                        android:thumb="@drawable/prog_thumb"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_lasso_cut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:padding="@dimen/_4sdp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_33sdp"
+                    android:layout_marginEnd="@dimen/_7sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/_7sdp"
+                        android:paddingEnd="@dimen/_7sdp"
+                        android:textSize="@dimen/_8sdp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="@string/offset"/>
+
+                    <SeekBar
+                        android:id="@+id/seekBarExtractOffset"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_33sdp"
+                        android:background="@null"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:max="300"
+                        android:maxHeight="@dimen/_3sdp"
+                        android:progressDrawable="@drawable/prog_line"
+                        android:splitTrack="false"
+                        android:thumb="@drawable/prog_thumb"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageViewCutOutSide"
+                    android:layout_width="@dimen/_27sdp"
+                    android:layout_height="@dimen/_27sdp"
+                    android:padding="@dimen/_7sdp"
+                    android:onClick="onClick"
+                    android:background="@drawable/bg_circle"
+                    android:src="@drawable/ic_cut"
+                    app:tint="@color/white"/>
+
+                <ImageView
+                    android:id="@+id/imageViewCutInSide"
+                    android:layout_width="@dimen/_27sdp"
+                    android:layout_height="@dimen/_27sdp"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_7sdp"
+                    android:background="@drawable/bg_circle"
+                    android:padding="@dimen/_7sdp"
+                    android:onClick="onClick"
+                    android:src="@drawable/ic_cut"
+                    app:tint="@color/white"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lineColor"
+            app:layout_constraintBottom_toTopOf="@+id/rvOptions"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_47sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            android:nestedScrollingEnabled="false"
+            tools:listitem="@layout/item_tool"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

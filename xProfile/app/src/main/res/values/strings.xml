@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">xProfile</string>
+    <!--AdMob or Google Ad Manager App ID-->
+    <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+
+    <!--AppLovin SDK Key-->
+    <string name="applovin_sdk_key" translatable="false">93ZMqWE2FI00FtHKOcdACan5Oivwqlz3-CzVXzs1Pte15xlc6HOFqZ_ciG8spQO01JhgkdXI44oCf6kfdR9VeX</string>
+
+    <!-- OneSignal ID -->
+    <string name="oneSignal_id" translatable="false">e30964cf-7b0c-4716-9c64-8ac78b8883c4</string>
+
+    <string name="save">Save</string>
+    <string name="frame">Frame</string>
+    <string name="border">Bg</string>
+    <string name="art">Portrait</string>
+    <string name="preview">Preview</string>
+    <string name="facebook">▪ Facebook</string>
+    <string name="instagram">▪ Instagram</string>
+    <string name="whatsapp">▪ Whatsapp</string>
+    <string name="profile_pic">Profile Pic</string>
+    <string name="post">Posts</string>
+    <string name="following">Following</string>
+    <string name="followers">Followers</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="chat">Chat</string>
+    <string name="calls">Calls</string>
+    <string name="status">Status</string>
+    <string name="customize_your_profile_pic">Customize Your Profile Pic.</string>
+    <string name="gradient">Gradient</string>
+    <string name="color">Color</string>
+    <string name="background">Background</string>
+    <string name="pattern">Pattern</string>
+    <string name="share_image_via">Share image via…</string>
+    <string name="download_this">Download this awesome app</string>
+    <string name="gallery">Gallery</string>
+    <string name="txt_select_picture">Select Picture</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="internet_dialog">You are not connected to the internet. \n Make sure wifi or mobile data is on, Airplane mode is off and try again.</string>
+    <string name="retry">Retry</string>
+    <string name="please_try_again">please try again</string>
+    <string name="rotate">Rotate</string>
+    <string name="txt_not_detect_human">No human detected!</string>
+    <string name="camera">Camera</string>
+    <string name="works">Works</string>
+    <string name="share">Share</string>
+    <string name="rate_us">Rate us</string>
+    <string name="privacy_policy">Privacy</string>
+    <string name="feedback">Feedback</string>
+    <string name="apps">Apps</string>
+    <string name="Error_occurred">Error occurred!</string>
+    <string name="no_result_found">No result found!</string>
+    <string name="are_you_sure_you_want_to_discard_changes">Are you sure you want to discard changes?</string>
+    <string name="discard_changes">Discard Changes</string>
+    <string name="cancel">Cancel</string>
+    <string name="style">Style</string>
+    <string name="your_portrait">Your Personal Portrait Maker</string>
+    <string name="exposure">Exposure</string>
+    <string name="brightness">Brightness</string>
+    <string name="contrast">Contrast</string>
+    <string name="saturation">Saturation</string>
+    <string name="hue">Hue</string>
+    <string name="adjust">Adjust</string>
+    <string name="zoom">Zoom</string>
+    <string name="flip">Flip</string>
+    <string name="stickers">Sticker</string>
+    <string name="drip">Drip</string>
+    <string name="crop">Crop</string>
+    <string name="left">Left</string>
+    <string name="horizontal">Horizontal</string>
+    <string name="vertical">Vertical</string>
+    <string name="right">Right</string>
+    <string name="text_images">Selected %1$d / 1</string>
+    <string name="emboss">Emboss</string>
+    <string name="highlight">Highlight</string>
+    <string name="shadow">Shadow</string>
+    <string name="rgb">RGB</string>
+    <string name="red">Red</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
+    <string name="sharpen">Sharpen</string>
+    <string name="vibrance">Vibrance</string>
+    <string name="vignette">Vignette</string>
+    <string name="start_position">Start</string>
+    <string name="end_position">End</string>
+    <string name="wb">WB</string>
+    <string name="temperature">Temperature</string>
+    <string name="tint">Tint</string>
+    <string name="importing_image">Importing image</string>
+    <string name="import_error">Import error</string>
+    <string name="size">Size</string>
+    <string name="offset">Offset</string>
+    <string name="threshold">Threshold</string>
+    <string name="erase">Erase</string>
+    <string name="auto">Magic</string>
+    <string name="lasso">Lasso</string>
+    <string name="reset">Restore</string>
+    <string name="import_img_warning">Import image field</string>
+
+    <string name="permission_info">App requires permission to Storage to view images.</string>
+    <string name="permission_force">App requires permission to Storage to view images. Tap Settings and go to Permissions to grant permission.</string>
+    <string name="permission_ok">OK</string>
+    <string name="permission_settings">Settings</string>
+    <string name="permission_package">package</string>
+
+    <string name="album_view">Select photo album</string>
+    <string name="image_view">Tap to select images</string>
+
+    <string name="selected">selected</string>
+    <string name="limit_exceeded">Can select a maximum of %d images</string>
+    <string name="error_null_cursor">Oops, something went wrong!</string>
+    <string name="add">ADD</string>
+    <string name="capture_photo">Capture Photo</string>
+
+</resources>
